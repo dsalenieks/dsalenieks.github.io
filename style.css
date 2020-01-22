@@ -5,6 +5,7 @@ ul {
 }
   
 li a {
+    display: block;
     text-align: center;
     width: 60px;
     color: #000;
