@@ -40,12 +40,69 @@
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-  /* Image Size */
-  .img-yoscrk {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* Image Size */
+.img-yoscrk {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
     
-  }
+}
+
+body, html{
+  width: 100%;
+	height: 100%;	
+  margin: 0;
+}
+
+#i1, #i2, #i3,{ display: none;}
+
+.container{
+    margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 70%;
+		height: 0;
+		padding-bottom: 38%;
+}
+
+.container .slide_img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .slide_img img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#i1, #i2, #i3{
+  display: none;
+}
+
+.pre, .nxt{
+  ...5.33;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.pre{
+  left: 0;
+}
+
+.nxt{
+  right: 0;
+}
+
+.slide_img{
+  z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three{
+  z-index: 9;
+}
