@@ -56,7 +56,7 @@ body, html{
   margin: 0;
 }
 
-#i1, #i2, #i3,{ display: none;}
+#i1, #i2, #i3{ display: none;}
 
 .container{
     margin: 0 auto;
@@ -79,21 +79,16 @@ body, html{
   height: 100%;
 }
 
-#i1, #i2, #i3{
-  display: none;
-}
-
-.pre, .nxt{
-  ...5.33;
+.prev, .next{
   z-index: 99;
   cursor: pointer;
 }
 
-.pre{
+.prev{
   left: 0;
 }
 
-.nxt{
+.next{
   right: 0;
 }
 
