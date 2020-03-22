@@ -17,6 +17,7 @@
 		}
 		button{
 			padding: 20px;
+			border: none;
 			background: #999;
 			font-size: 30px;
 			color: white;
@@ -57,13 +58,13 @@
 
 <script type="text/javascript">
 	var slider_content = document.getElementById('box');
-	var image = ["yoscrk", "teststrips", "tree4web"];
+	var image = ["images/yoscrk.jpg", "images/teststrips.jpg", "images/tree4web.jpg"];
 	var i = image.length;
 	function nextImage(){
 		if (i<image.length) {
 			i = i+1;
 		}else{
-			i=1;
+			i = 1;
 		}
 			slider_content.innerHTML = "<img src ="+image[i-1]+".jpg>"; 
 	}	
