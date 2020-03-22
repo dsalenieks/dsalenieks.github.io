@@ -63,11 +63,9 @@
 
 .container .slide_img{
     position: absolute;
-    width: 5%;;
     height: 100%;
 }
 .container .slide_img img{
-    width: inherit;
     height: inherit;
 }
 
@@ -125,7 +123,6 @@ transition: .4s;
 #nav_slide .dots:hover {
 cursor: pointer;
 background-color: rgba(255, 255, 255, 0.9);
-transition: .25s
 }
 
 .slide_img{z-index: -1;}
@@ -133,15 +130,13 @@ transition: .25s
 #i1:checked ~ #one  ,
 #i2:checked ~ #two  ,
 #i3:checked ~ #three,
-#i4:checked ~ #four ,
-#i5:checked ~ #five 
-{z-index: 9; animation: scroll 1s ease-in-out;}
+ 
+{z-index: 9;}
 
 #i1:checked  ~  #nav_slide #dot1,
 #i2:checked  ~  #nav_slide #dot2,
 #i3:checked  ~  #nav_slide #dot3,
-#i4:checked  ~  #nav_slide #dot4,
-#i5:checked  ~  #nav_slide #dot5
+
 { background-color: rgba(255,255,255,.9);}
 
 
