@@ -60,13 +60,14 @@
 	var image = ["images/yoscrk.jpg", "images/teststrips.jpg", "tree4web.jpg"];
 	var i = image.length;
 	function nextImage(){
-		if (i>image.length){
+		if (i>image.length) {
 			i = i+1;
 		}else{
 			i=1;
 		}
-		slider_content.innerHTML ="<img src = "+image[i-1]+>";
-	}
+			slider_content.innerHTML = <"img src ="+image[i-1]+>""; 
+	}	
+
 
 	function prevImage(){
 		if (i<image.length+1 && i>1){
@@ -74,8 +75,7 @@
 		}else{
 			i= image.length;
 		}
-			slider_content.innerHTML ="<img src = "+image[i-1]+>";
-	}
+			slider_content.innerHTML =<"img src = "+image[i-1]+>""
 </script>
 </body>
 
