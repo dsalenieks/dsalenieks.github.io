@@ -3,6 +3,35 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Photowork</title>
+
+		<style type="text./css">
+		img{
+			width: 100%;
+			height: 500px;
+		}
+		#slider{
+			width: 1000px;
+			height: 500px;
+			margin: 20px auto;
+			position: relative;
+		}
+		button{
+			padding: 20px;
+			background: #999;
+			font-size: 30px;
+			colour: white;
+			cursor: pointer;
+		}
+
+		.next{
+			border-radius: 10px 0px 0px 10px;
+			margin-left: 950px;
+		} 
+		.prev{
+			border-radius: 0px 10px 10px 0px
+		}
+
+		</style>
 	</head>
 	
 
@@ -15,48 +44,41 @@
 		</div>
 	</div>
 
-<style>
-.mySlides {display:none;}
-</style>
 <body>
 
-<h2 class="w3-center">Manual Slideshow</h2>
+	<div id ="slider">
+		
+		<div id="box">
+			<img src="images/yoscrk.jpg">
+		</div>
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="images/yoscrk.jpg" style="width:50%">
-  <img class="mySlides" src="images/teststrips.jpg" style="width:50%">
-  <img class="mySlides" src="iages/tree4web.jpg" style="width:50%">
- 
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
-</body>
-</html>
-
+		<button class="prev" onclick="prevImage()">-</button>
+		<button class="next" onclick="nextImage">+</button>
 	</div>
 
+<script type="text/javascript">
+	var slider_container = document.getElementById("box");
+	var image = [images/yoscrk.jpg, images/teststrips.jpg, tree4web.jpg];
+	var i = image.length;
+	function nextImage(){
+		if (i>image.length){
+			i = i+1;
+		}else{
+			i=1;
+		}
+			slider_container.innerHTML ="<img src = "+image[i-1}+";
+	}
+
+	function prevImage(){
+		if (i<image.length+1 && i>1){
+			i = i-1;
+		}else{
+			i= image.length;
+		}
+			slider_container.innerHTML ="<img src = "+image[i-1}+";
+	}
+</script>
+</body>
 
 
 </html>
