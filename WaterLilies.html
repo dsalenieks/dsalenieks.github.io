@@ -4,8 +4,56 @@
 		<meta charset="utf-8">
 		<title>Photowork</title>
 		<link rel="stylesheet" href="style.css">
-	</head>
+		<style type="text/css">
+			.container {
+				text-align: center;
+			}
 	
+			.container img{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 50%;
+				height: auto;
+			}
+	
+			.container #slider{
+				width: 70%;
+				height: auto;
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+			}
+	
+			.container button{
+				border: none;
+				background: rgb(255, 255, 255);
+				font-size: 30px;
+				color: rgb(0, 0, 0);
+				cursor: pointer;
+				position: relative;
+				outline:none;
+			}
+	
+			.btn:focus {
+				outline: none;
+			}
+	
+			.next{
+				background: rgb(255, 255, 255);
+				color: rgb(0, 0, 0);
+			} 
+			.prev{
+				background: rgb(255, 255, 255);
+				color: rgb(0, 0, 0);
+			}
+	
+		</style>
+
+	</head>
+
+
+<body>
 
 	<div class="dropdown">
 		<button onclick="myFunction()" class="dropbtn">Work</button>
@@ -15,6 +63,46 @@
 		  <a href="Attributions">Attributions</a>
 		</div>
 	</div>
+
+	
+	<div class="container">
+	<div id="slider">
+		
+		<div id="box">
+			<img src="images/lilies4web.jpg">
+		</div>
+
+		<button class="prev" onclick="prevImage()">-</button>
+		<button class="next" onclick="nextImage()">-</button>
+	</div>
+
+	<script type="text/javascript">
+	var slider_content = document.getElementById('box');
+	var image = ["images/lilies4web"];
+	var i = image.length;
+	function nextImage(){
+		if (i<image.length) {
+			i = i+1;
+		}else{
+			i = 1;
+		}
+			slider_content.innerHTML = "<img src ="+image[i-1]+".jpg>"; 
+	}	
+
+
+	function prevImage(){
+		if (i<image.length+1 && i>1){
+			i = i-1;
+		}else{
+			i= image.length;
+		}
+			slider_content.innerHTML = "<img src ="+image[i-1]+".jpg>";
+	}
+	</script>
+	</div>
+
+
+</body>
 
 
 
